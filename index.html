@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- CRUDS => Create, Read(Retrieve), Update, Delete, Search -->
+    <div class="container p-5 ">
+        <div>
+            <div class="my-3">
+                <label for="productNameInput">Product Name :</label>
+                <input id="productNameInput" type="text" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="productPriceInput">Product Price :</label>
+                <input id="productPriceInput" type="number" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="productCategoryInput">Product Category :</label>
+                <input id="productCategoryInput" type="text" class="form-control">
+            </div>
+            <div class="my-3">
+                <label for="productDescInput">Product Desc :</label>
+                <textarea id="productDescInput" rows="5" class="form-control"></textarea>
+            </div>
+            <button id="addupdateBtn" onclick="addUpdateProduct()" class="btn btn-outline-light">Add Product</button>
+        </div>
+        <input id="searchInput" onkeyup="displayProduct()" type="text" class="form-control mt-5 w-50 mx-auto" placeholder="Search...">
+        <div class=" mt-5 ">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Product name</th>
+                        <th>Product price</th>
+                        <th>Product Category</th>
+                        <th>Product Desc</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>  
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
